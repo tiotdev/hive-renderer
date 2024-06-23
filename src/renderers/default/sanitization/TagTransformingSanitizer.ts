@@ -112,6 +112,7 @@ export class TagTransformingSanitizer {
                 },
                 div: (tagName, attribs) => {
                     const attys: sanitize.Attributes = {};
+                    if (attribs.json) attys.json = attribs.json;
                     const classWhitelist = ['pull-right', 'pull-left', 'text-justify', 'text-rtl', 'text-center', 'text-right', 'videoWrapper', 'phishy'];
                     const validClass = classWhitelist.find((e) => attribs.class === e);
                     if (validClass) {
