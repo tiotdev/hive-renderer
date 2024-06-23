@@ -39,7 +39,7 @@ export class TagTransformingSanitizer {
 
                 // class attribute is strictly whitelisted (below)
                 // and title is only set in the case of a phishing warning
-                div: ['class', 'title'],
+                div: ['class', 'title', 'json'],
 
                 // style is subject to attack, filtering more below
                 td: ['style'],
